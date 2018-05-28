@@ -142,16 +142,19 @@
                         a = (totalWidth > $this.width()) ? -1 : 1;
                     }
                     $divs.each(function() {
-                        $(this).css({
-                            width: $(this).data('newWidth'),
-                            height: $(this).data('newHeight'),
-                            float: 'left',
-                            marginRight: meta_opts.margin + 'px',
-                            marginTop: meta_opts.margin + 'px',
-                            boxSizing: 'border-box',
-                            overflow: 'hidden'
+                        $(this)
+                            .css({
+                                width: $(this).data('newWidth'),
+                                height: $(this).data('newHeight'),
+                                float: 'left',
+                                marginRight: meta_opts.margin + 'px',
+                                marginTop: meta_opts.margin + 'px',
+                                boxSizing: 'border-box',
+                                overflow: 'hidden'
 
-                        });
+                            })
+                            .addClass('stalin-div');
+
                         var $def = $.Deferred();
                         $array_for_promises.push($def);
                         var $a = $('<a/>', {
