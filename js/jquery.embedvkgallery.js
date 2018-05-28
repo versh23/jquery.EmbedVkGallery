@@ -153,7 +153,7 @@
                                 overflow: 'hidden'
 
                             })
-                            .addClass('stalin-div');
+                            .addClass('stalin-photo');
 
                         var $def = $.Deferred();
                         $array_for_promises.push($def);
@@ -212,6 +212,7 @@
                             item = 0;
                         for (var i = 0; i < arr.length; i++) {
                             var $row = $('<div/>');
+                            $row.addClass('stalin-photos');
                             for (var j = 0; j < arr[i]; j++) {
                                 var c_height = data.response.items[item].sizes[sizes].height,
                                     c_width = data.response.items[item].sizes[sizes].width,
